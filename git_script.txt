@@ -3,5 +3,5 @@ git rm -r --cached bin
 git rm -r --cached obj
 git rm -r --cached SFML-2.5.0/doc
 git rm -r --cached SFML-2.5.0/examples
-git commit -m 'test1'
+git commit -m 'del unnecessary folders'
 git push origin master
