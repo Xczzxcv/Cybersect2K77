@@ -1,5 +1,5 @@
 git add *
-git commit -m 'test'
+git commit -m 'test1'
 git rm -r --cached bin
 git rm -r --cached obj
 git rm -r --cached SFML-2.5.0/doc
