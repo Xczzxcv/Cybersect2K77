@@ -8,53 +8,67 @@ class Building;
 class TransitionScene;
 class DialogScene;
 class LiftingScene;
+class Game;
+
+class Game {
+public:
+    Game(){
+        protagonist = new Character();
+
+    }
+
+private:
+    Character *protagonist;
+
+
+};
 
 class Human{
 public:
     enum Implant{
-        eyes = 1,
-        mouth = 2,
-        nose = 4,
-        ears = 8,
-        brain = 16,
-        hands = 32,
-        legs = 64,
+        Eyes = 1,
+        Mouth = 2,
+        Nose = 4,
+        Ears = 8,
+        Brain = 16,
+        Hands = 32,
+        Legs = 64,
     };
     enum Profession{
         Unemployed = 0,
         // a rank A professions
-        president = PROFESSIONS_AT_RANK*0 + 1,
-        manager,
-        business_owner,
+        President = PROFESSIONS_AT_RANK*0 + 1,
+        Manager,
+        Business_owner,
 
         // a rank B professions
-        office_man = PROFESSIONS_AT_RANK*1 + 1,
-        policeman,
-        doctor,
-        fireman,
-        freelancer,
-        programmer,
+        Office_man = PROFESSIONS_AT_RANK*1 + 1,
+        Policeman,
+        Doctor,
+        Fireman,
+        Freelancer,
+        Programmer,
 
         // a rank C professions
-        zavod_worker = PROFESSIONS_AT_RANK*2 + 1,
+        Zavod_worker = PROFESSIONS_AT_RANK*2 + 1,
 
         // a rank D professions
-        janitor = PROFESSIONS_AT_RANK*3 + 1,
-        waiter,
+        Janitor = PROFESSIONS_AT_RANK*3 + 1,
+        Waiter,
     };
     enum Rank {A, B, C, D};
-    // to check to which rank profession goes to you need to divide profession number to rank
+    // to check to which rank profession goes to you need to divide profession number by rank
     enum Activity{
-        eat = 1,
-        morning_prepare = 2,
-        evening_prepare = 4,
-        work_at_work = 8, // lol
-        work_at_home = 16,
-        sleep = 32,
-        relax = 64,
-
+        Eat,
+        Watch_tv,
+        Home_chores,
+        Work_at_work, // lol
+        Work_at_home,
+        Sleep,
+        Surf_Internet,
+        Play_games,
     };
-    enum Gender { male, female };
+    enum Gender { Male, Female };
     typedef struct{
         Activity morning;
         Activity daytime1;
@@ -78,7 +92,6 @@ private:
 
 
     void make_shedule(){
-        ;
     }
 
     void make_priority(){
@@ -89,13 +102,17 @@ private:
 class Character{
 public:
     Character(){
-
+        charisma = Character::Stat_level::ZERO;
+        intellect = Character::Stat_level::ZERO;
+        status = Character::Sect_level::errand_boy;
     }
     enum Stat_level { ZERO, very_low, low, normal, high, very_high, ULTRA_MEGA_HIGH };
+    enum Sect_level { errand_boy, disciple, beginner, master, head_of_the_sect};
 private:
+    Sect_level status;
     float revenue_share;
-    int charisma;
-    int intellect;
+    Stat_level charisma;
+    Stat_level intellect;
 };
 
 class Building{

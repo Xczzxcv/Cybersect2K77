@@ -1,9 +1,11 @@
 # depslib dependency file v1.0
-1541259443 source:b:\Житель\documents\desktop\ОП\cybersect 2k77\src\main.cpp
+1541853374 source:b:\Житель\documents\desktop\ОП\cybersect 2k77\src\main.cpp
 	<stdio.h>
 	<iostream>
 	<stdlib.h>
-	"classes.h"
+	"classes.hpp"
 
 1541517196 b:\Житель\documents\desktop\ОП\cybersect 2k77\src\classes.h
+
+1541854226 b:\Житель\documents\desktop\ОП\cybersect 2k77\src\classes.hpp
 
