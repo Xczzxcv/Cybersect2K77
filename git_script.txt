@@ -1,0 +1,7 @@
+git add *
+git commit -m 'test'
+git rm -r --cached bin
+git rm -r --cached obj
+git rm -r --cached SFML-2.5.0/doc
+git rm -r --cached SFML-2.5.0/examples
+git push origin master
